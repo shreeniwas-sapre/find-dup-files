@@ -60,7 +60,7 @@ def analyze(content, header_lines, verbose=False):
         if header_lines is not None and count > header_lines:
             break
         dpmentry = directory_pair_map[x]
-        print(f'\t{count:6d}: "{x}" total size of matching files: ', dpmentry['totalsize'])
+        print(f'\t{count:6d}: "{x}" total size of matching files: ', dpmentry['totalsize'], ', #matching files: ', len(dpmentry['files']))
         if verbose:
             sr = 0
             for pathpair in dpmentry['files']:
